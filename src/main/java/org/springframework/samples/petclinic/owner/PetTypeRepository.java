@@ -39,5 +39,10 @@ public interface PetTypeRepository extends JpaRepository<PetType, Integer> {
 	 */
 	@Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")
 	List<PetType> findPetTypes();
+	
+	  
+	Pet findById(int id);
+	  
+	void save(Pet pet);
 
 }
